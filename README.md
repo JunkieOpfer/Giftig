@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-"Giftig MultiTool is a program that has many features, it can activate Windows, install programs etc.
+Giftig MultiTool is a program that has many features, it can activate Windows, install programs etc.
 </p>
 
 <br><br>
