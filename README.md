@@ -46,7 +46,7 @@ Giftig MultiTool is a program that has many features, it can activate Windows, i
 
 ---
 
-#### <a href="https://github.com/JunkieOpfer/Steam-Checker/releases/download/SteamChecker/SteamChecker.Proxy.Version.zip">🔵 Preview (Proxy Version):</a>
+#### <a href="https://github.com/JunkieOpfer/Giftig/releases/tag/giftig">🔵 Preview (Download):</a>
 <details>
   <summary>Dashboard</summary>
   
