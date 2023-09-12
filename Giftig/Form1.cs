@@ -136,12 +136,12 @@ namespace Giftig
                 discord_check.Checked = false;
 
                 pidgin_check.Checked = false;
-                perfectprivacy_check.Checked = true;
-                mullvad_check.Checked = true;
+                perfectprivacy_check.Checked = false;
+                mullvad_check.Checked = false;
 
-                keepassxc_check.Checked = true;
-                atomicwallet_check.Checked = true;
-                exodus_check.Checked = true;
+                keepassxc_check.Checked = false;
+                atomicwallet_check.Checked = false;
+                exodus_check.Checked = false;
             }
         }
 

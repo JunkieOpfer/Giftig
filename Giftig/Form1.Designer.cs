@@ -803,6 +803,7 @@
             this.premierepro_check.CheckedState.BorderRadius = 2;
             this.premierepro_check.CheckedState.BorderThickness = 0;
             this.premierepro_check.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.premierepro_check.Enabled = false;
             this.premierepro_check.Location = new System.Drawing.Point(236, 101);
             this.premierepro_check.Name = "premierepro_check";
             this.premierepro_check.Size = new System.Drawing.Size(20, 20);
