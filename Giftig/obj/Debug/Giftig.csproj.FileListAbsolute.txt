@@ -1,0 +1,13 @@
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\bin\Debug\Giftig.exe.config
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\bin\Debug\Giftig.exe
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\bin\Debug\Giftig.pdb
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\bin\Debug\Guna.UI2.dll
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.csproj.AssemblyReference.cache
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.Properties.Resources.resources
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.csproj.GenerateResource.cache
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.csproj.CopyComplete
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.exe
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.pdb
+C:\Users\User\Documents\vs\c#\Giftig\Giftig\Giftig\obj\Debug\Giftig.Giftig.resources
