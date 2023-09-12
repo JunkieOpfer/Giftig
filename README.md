@@ -2,11 +2,11 @@
 
 ---
 <p align = "center">
-  <a href = "">Download - Latest Release</a>
+  <a href = "https://github.com/JunkieOpfer/Giftig/releases/tag/giftig">Download - Latest Release</a>
 </p>
 
 <p align="center">
-hi
+"Giftig MultiTool is a program that has many features, it can activate Windows, install programs etc.
 </p>
 
 <br><br>
