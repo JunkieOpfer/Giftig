@@ -43,7 +43,7 @@ Giftig MultiTool is a program that has many features, it can activate Windows, i
 - [x] Exodus
 - [x] Better ChatGPT
 
-#### Pre Installer Tab
+#### Soon
 - [ ] Adobe Premiere Pro 2023 (self unpack)
 
 ---
