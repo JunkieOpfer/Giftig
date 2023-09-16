@@ -103,7 +103,7 @@ namespace Giftig
 
                 idapro_check.Checked = true;
                 dnspy_check.Checked = true;
-                premierepro_check.Checked = true;
+                //premierepro_check.Checked = true;
 
                 session_check.Checked = true;
                 webcord_check.Checked = true;
@@ -116,6 +116,8 @@ namespace Giftig
                 keepassxc_check.Checked = true;
                 atomicwallet_check.Checked = true;
                 exodus_check.Checked = true;
+
+                betterchatgpt_check.Checked = true;
             }
             else
             {
@@ -142,6 +144,8 @@ namespace Giftig
                 keepassxc_check.Checked = false;
                 atomicwallet_check.Checked = false;
                 exodus_check.Checked = false;
+
+                betterchatgpt_check.Checked = false;
             }
         }
 
@@ -492,6 +496,26 @@ namespace Giftig
                 string downloadUrl = "https://cdn.discordapp.com/attachments/1150535987932442755/1150907630219440203/exodus-windows-x64-23.9.11.exe";
 
                 string downloadedFileName = "exodus-setup.exe";
+
+                try
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        webClient.DownloadFile(downloadUrl, downloadedFileName);
+
+                        Process.Start(downloadedFileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            if (betterchatgpt_check.Checked)
+            {
+                string downloadUrl = "https://cdn.discordapp.com/attachments/1150535987932442755/1152607490366771210/win-better-chatgpt-1.0.4-x64.exe";
+
+                string downloadedFileName = "betterchatgpt-setup.exe";
 
                 try
                 {

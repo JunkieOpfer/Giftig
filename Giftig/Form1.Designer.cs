@@ -98,6 +98,8 @@
             this.winrar_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.notepadplusplus_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.librewolf_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.betterchatgpt_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2TabControl1.SuspendLayout();
@@ -534,6 +536,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.betterchatgpt_check);
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Controls.Add(this.exodus_check);
             this.tabPage3.Controls.Add(this.label22);
@@ -1114,6 +1118,32 @@
             this.librewolf_check.UncheckedState.BorderThickness = 0;
             this.librewolf_check.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.label24.Location = new System.Drawing.Point(42, 185);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(86, 16);
+            this.label24.TabIndex = 38;
+            this.label24.Text = "Better ChatGPT";
+            // 
+            // betterchatgpt_check
+            // 
+            this.betterchatgpt_check.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.betterchatgpt_check.CheckedState.BorderRadius = 2;
+            this.betterchatgpt_check.CheckedState.BorderThickness = 0;
+            this.betterchatgpt_check.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.betterchatgpt_check.Location = new System.Drawing.Point(16, 183);
+            this.betterchatgpt_check.Name = "betterchatgpt_check";
+            this.betterchatgpt_check.Size = new System.Drawing.Size(20, 20);
+            this.betterchatgpt_check.TabIndex = 37;
+            this.betterchatgpt_check.Text = "guna2CustomCheckBox3";
+            this.betterchatgpt_check.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.betterchatgpt_check.UncheckedState.BorderRadius = 2;
+            this.betterchatgpt_check.UncheckedState.BorderThickness = 0;
+            this.betterchatgpt_check.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // Giftig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1122,6 +1152,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.guna2TabControl1);
             this.Controls.Add(this.TopPanel);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Giftig";
@@ -1220,6 +1251,8 @@
         private Guna.UI2.WinForms.Guna2CustomCheckBox atomicwallet_check;
         private System.Windows.Forms.Label label23;
         private Guna.UI2.WinForms.Guna2CustomCheckBox keepassxc_check;
+        private System.Windows.Forms.Label label24;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox betterchatgpt_check;
     }
 }
 
