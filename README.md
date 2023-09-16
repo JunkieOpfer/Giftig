@@ -2,7 +2,7 @@
 
 ---
 <p align = "center">
-  <a href = "https://github.com/JunkieOpfer/Giftig/releases/tag/giftig">Download - Latest Release</a>
+  <a href = "https://github.com/JunkieOpfer/Giftig/releases">Download - Latest Release</a>
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@ Giftig MultiTool is a program that has many features, it can activate Windows, i
 - [x] IDA Pro
 - [x] DnSpy (self unpack)
 - [x] Session
-- [x] Adobe Premiere Pro 2023 (self unpack)
+- [ ] Adobe Premiere Pro 2023 (self unpack)
 - [x] Discord
 - [x] WebCord
 - [x] Pidgin
@@ -46,7 +46,7 @@ Giftig MultiTool is a program that has many features, it can activate Windows, i
 
 ---
 
-#### <a href="https://github.com/JunkieOpfer/Giftig/releases/tag/giftig">🔵 Preview (Download):</a>
+#### <a href="https://github.com/JunkieOpfer/Giftig/releases>🔵 Preview (Download):</a>
 <details>
   <summary>Dashboard</summary>
   
