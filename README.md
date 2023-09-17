@@ -33,7 +33,6 @@ Giftig MultiTool is a program that has many features, it can activate Windows, i
 - [x] IDA Pro
 - [x] DnSpy (self unpack)
 - [x] Session
-- [ ] Adobe Premiere Pro 2023 (self unpack)
 - [x] Discord
 - [x] WebCord
 - [x] Pidgin
@@ -42,29 +41,19 @@ Giftig MultiTool is a program that has many features, it can activate Windows, i
 - [x] KeepassXC
 - [x] Atomic Wallet
 - [x] Exodus
+- [x] Better ChatGPT
 
+#### Soon
+- [ ] Adobe Premiere Pro 2023 (self unpack)
 
 ---
 
-#### <a href="https://github.com/JunkieOpfer/Giftig/releases>🔵 Preview (Download):</a>
-<details>
-  <summary>Dashboard</summary>
-  
-  ![Image](https://i.postimg.cc/XvTXxRpc/image.png)
-</details>
-<details>
-  <summary>Activation</summary>
-  
-  ![Image](https://i.postimg.cc/fLmyP8d4/image.png)
-</details>
-<details>
-  <summary>Customize</summary>
-  
-  ![Image](https://i.postimg.cc/zvkBz3p0/image.png)
-</details>
-<details>
-  <summary>Pre Installer</summary>
-  
-  ![Image](https://i.postimg.cc/J73tcdmZ/image.png)
-</details>
 
+
+![Image](https://i.postimg.cc/XvTXxRpc/image.png)
+
+![Image](https://i.postimg.cc/fLmyP8d4/image.png)
+
+![Image](https://i.postimg.cc/zvkBz3p0/image.png)
+
+![Image](https://i.postimg.cc/J73tcdmZ/image.png)
