@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿using Ionic.Zip;
+using Microsoft.Win32;
+using SharpCompress.Archives.Zip;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
@@ -17,9 +20,12 @@ namespace Giftig
 {
     public partial class Giftig : Form
     {
+        private const string VersionUrl = "https://junkieopfer.github.io/Giftig/Updates/version.txt";
+        private const string UpdateUrl = "https://junkieopfer.github.io/Giftig/Updates/Giftig1.1.zip";
         public Giftig()
         {
             InitializeComponent();
+            CheckAndApplyUpdate();
 
             disable_btn.Click += disable_btn_Click;
             enable_btn.Click += enable_btn_Click;
@@ -28,6 +34,87 @@ namespace Giftig
 
             LoadStartupPrograms();
         }
+
+        public void CheckAndApplyUpdate()
+        {
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    string latestVersionString = client.DownloadString(VersionUrl);
+                    Version latestVersion = new Version(latestVersionString);
+                    Version currentVersion = new Version(Application.ProductVersion);
+
+                    if (latestVersion > currentVersion)
+                    {
+                        if (MessageBox.Show("An update is available. Do you want to update?", "Update Available", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            DownloadAndApplyUpdate();
+                        }
+                        else
+                        {
+                            Environment.Exit(0);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No updates available.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking for updates: " + ex.Message);
+            }
+        }
+
+        private void DownloadAndApplyUpdate()
+        {
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    string zipFilePath = Path.Combine(Application.StartupPath, "update.zip");
+                    client.DownloadFile(UpdateUrl, zipFilePath);
+
+                    ExtractUpdate(zipFilePath);
+
+                    MessageBox.Show("Update successfully applied!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error applying update: " + ex.Message);
+            }
+        }
+
+        private void ExtractUpdate(string zipFilePath)
+        {
+            try
+            {
+                using (var zip = Ionic.Zip.ZipFile.Read(zipFilePath))
+                {
+                    foreach (var entry in zip)
+                    {
+                        string destinationPath = Path.Combine(Application.StartupPath, entry.FileName);
+
+                        if (File.Exists(destinationPath))
+                        {
+                            continue;
+                        }
+
+                        Directory.CreateDirectory(Path.GetDirectoryName(destinationPath));
+
+                        entry.Extract(destinationPath, ExtractExistingFileAction.DoNotOverwrite);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error extracting update: " + ex.Message);
+            }
+        }
+
 
         private void actvSpotify_btn_Click(object sender, EventArgs e)
         {
