@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,13 @@ namespace Giftig
         public Giftig()
         {
             InitializeComponent();
+
+            disable_btn.Click += disable_btn_Click;
+            enable_btn.Click += enable_btn_Click;
+            refresh_btn.Click += refresh_btn_Click;
+            addtostartup_btn.Click += addtostartup_btn_Click;
+
+            LoadStartupPrograms();
         }
 
         private void actvSpotify_btn_Click(object sender, EventArgs e)
@@ -613,5 +621,137 @@ namespace Giftig
                 MessageBox.Show("The settings file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
+
+        private void LoadStartupPrograms()
+        {
+            listViewStartupPrograms.Items.Clear();
+
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run");
+
+            if (key != null)
+            {
+                foreach (string valueName in key.GetValueNames())
+                {
+                    string programPath = key.GetValue(valueName).ToString();
+
+                    ListViewItem item = new ListViewItem(valueName);
+                    item.SubItems.Add("Enabled");
+                    item.Tag = programPath;
+
+                    listViewStartupPrograms.Items.Add(item);
+                }
+
+                key.Close();
+            }
+        }
+
+        private void UpdateListViewItemState(string programPath, bool enabled)
+        {
+            foreach (ListViewItem item in listViewStartupPrograms.Items)
+            {
+                if (item.Tag.ToString() == programPath)
+                {
+                    item.SubItems[1].Text = enabled ? "Enabled" : "Disabled";
+                    break;
+                }
+            }
+        }
+
+        private void EnableStartupProgram(string programName, string programPath)
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+            key.SetValue(programName, programPath);
+            key.Close();
+
+            UpdateListViewItemState(programPath, true);
+        }
+
+        private void DisableStartupProgram(string programPath)
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+            key.DeleteValue(System.IO.Path.GetFileNameWithoutExtension(programPath), false);
+            key.Close();
+
+            UpdateListViewItemState(programPath, false);
+        }
+
+        private void RemoveStartupProgram(string programPath)
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+            key.DeleteValue(System.IO.Path.GetFileNameWithoutExtension(programPath), false);
+            key.Close();
+
+            ListViewItem itemToRemove = null;
+            foreach (ListViewItem item in listViewStartupPrograms.Items)
+            {
+                if (item.Tag.ToString() == programPath)
+                {
+                    itemToRemove = item;
+                    break;
+                }
+            }
+
+            if (itemToRemove != null)
+                listViewStartupPrograms.Items.Remove(itemToRemove);
+        }
+
+
+        private void disable_btn_Click(object sender, EventArgs e)
+        {
+            if (listViewStartupPrograms.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listViewStartupPrograms.SelectedItems[0];
+                string programPath = selectedItem.Tag.ToString();
+                DisableStartupProgram(programPath);
+            }
+        }
+
+        private void enable_btn_Click(object sender, EventArgs e)
+        {
+            if (listViewStartupPrograms.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listViewStartupPrograms.SelectedItems[0];
+                string programName = selectedItem.Text;
+                string programPath = selectedItem.Tag.ToString();
+                EnableStartupProgram(programName, programPath);
+            }
+        }
+
+        private void refresh_btn_Click(object sender, EventArgs e)
+        {
+            LoadStartupPrograms();
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addtostartup_btn_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Title = "Select Program";
+                dialog.Filter = "Executable Files|*.exe";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    string programPath = dialog.FileName;
+                    string programName = System.IO.Path.GetFileNameWithoutExtension(programPath);
+
+                    bool isAlreadyAdded = listViewStartupPrograms.Items.Cast<ListViewItem>()
+                        .Any(item => item.Tag.ToString().Equals(programPath, StringComparison.OrdinalIgnoreCase));
+
+                    if (isAlreadyAdded)
+                    {
+                        MessageBox.Show("This program is already in the startup list.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        EnableStartupProgram(programName, programPath);
+                        MessageBox.Show("Program added to startup successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+    }   
 }

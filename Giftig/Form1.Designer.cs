@@ -58,6 +58,8 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.betterchatgpt_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.exodus_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -98,8 +100,17 @@
             this.winrar_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.notepadplusplus_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.librewolf_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.betterchatgpt_check = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.listViewStartupPrograms = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.refresh_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.disable_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.enable_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.addtostartup_btn = new Guna.UI2.WinForms.Guna2Button();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2TabControl1.SuspendLayout();
@@ -115,6 +126,7 @@
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -204,6 +216,7 @@
             this.guna2TabControl1.Controls.Add(this.tabPage2);
             this.guna2TabControl1.Controls.Add(this.tabPage4);
             this.guna2TabControl1.Controls.Add(this.tabPage3);
+            this.guna2TabControl1.Controls.Add(this.tabPage5);
             this.guna2TabControl1.ItemSize = new System.Drawing.Size(180, 40);
             this.guna2TabControl1.Location = new System.Drawing.Point(-1, 33);
             this.guna2TabControl1.Name = "guna2TabControl1";
@@ -402,6 +415,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(149, 38);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "VMware";
+            this.toolTip3.SetToolTip(this.guna2Button1, "Activate VMware Workstation Pro Lifetime!");
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -425,6 +439,7 @@
             this.actvWindows_btn.Size = new System.Drawing.Size(149, 38);
             this.actvWindows_btn.TabIndex = 1;
             this.actvWindows_btn.Text = "Windows";
+            this.toolTip1.SetToolTip(this.actvWindows_btn, "Activate Windows or Office Lifetime!");
             this.actvWindows_btn.UseTransparentBackground = true;
             this.actvWindows_btn.Click += new System.EventHandler(this.actvWindows_btn_Click);
             // 
@@ -448,6 +463,7 @@
             this.actvSpotify_btn.Size = new System.Drawing.Size(149, 38);
             this.actvSpotify_btn.TabIndex = 0;
             this.actvSpotify_btn.Text = "Spotify";
+            this.toolTip2.SetToolTip(this.actvSpotify_btn, "Activate Spotify Premium Lifetime");
             this.actvSpotify_btn.UseTransparentBackground = true;
             this.actvSpotify_btn.Click += new System.EventHandler(this.actvSpotify_btn_Click);
             // 
@@ -582,6 +598,32 @@
             this.tabPage3.Size = new System.Drawing.Size(616, 409);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Pre Installer";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.label24.Location = new System.Drawing.Point(42, 185);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(86, 16);
+            this.label24.TabIndex = 38;
+            this.label24.Text = "Better ChatGPT";
+            // 
+            // betterchatgpt_check
+            // 
+            this.betterchatgpt_check.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.betterchatgpt_check.CheckedState.BorderRadius = 2;
+            this.betterchatgpt_check.CheckedState.BorderThickness = 0;
+            this.betterchatgpt_check.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.betterchatgpt_check.Location = new System.Drawing.Point(16, 183);
+            this.betterchatgpt_check.Name = "betterchatgpt_check";
+            this.betterchatgpt_check.Size = new System.Drawing.Size(20, 20);
+            this.betterchatgpt_check.TabIndex = 37;
+            this.betterchatgpt_check.Text = "guna2CustomCheckBox3";
+            this.betterchatgpt_check.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.betterchatgpt_check.UncheckedState.BorderRadius = 2;
+            this.betterchatgpt_check.UncheckedState.BorderThickness = 0;
+            this.betterchatgpt_check.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // label21
             // 
@@ -1118,31 +1160,136 @@
             this.librewolf_check.UncheckedState.BorderThickness = 0;
             this.librewolf_check.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
-            // label24
+            // tabPage5
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label24.Location = new System.Drawing.Point(42, 185);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(86, 16);
-            this.label24.TabIndex = 38;
-            this.label24.Text = "Better ChatGPT";
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.tabPage5.Controls.Add(this.addtostartup_btn);
+            this.tabPage5.Controls.Add(this.listViewStartupPrograms);
+            this.tabPage5.Controls.Add(this.refresh_btn);
+            this.tabPage5.Controls.Add(this.disable_btn);
+            this.tabPage5.Controls.Add(this.enable_btn);
+            this.tabPage5.Location = new System.Drawing.Point(184, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(616, 409);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Startup Manager";
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
-            // betterchatgpt_check
+            // listViewStartupPrograms
             // 
-            this.betterchatgpt_check.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.betterchatgpt_check.CheckedState.BorderRadius = 2;
-            this.betterchatgpt_check.CheckedState.BorderThickness = 0;
-            this.betterchatgpt_check.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.betterchatgpt_check.Location = new System.Drawing.Point(16, 183);
-            this.betterchatgpt_check.Name = "betterchatgpt_check";
-            this.betterchatgpt_check.Size = new System.Drawing.Size(20, 20);
-            this.betterchatgpt_check.TabIndex = 37;
-            this.betterchatgpt_check.Text = "guna2CustomCheckBox3";
-            this.betterchatgpt_check.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.betterchatgpt_check.UncheckedState.BorderRadius = 2;
-            this.betterchatgpt_check.UncheckedState.BorderThickness = 0;
-            this.betterchatgpt_check.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.listViewStartupPrograms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.listViewStartupPrograms.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listViewStartupPrograms.ForeColor = System.Drawing.Color.White;
+            this.listViewStartupPrograms.FullRowSelect = true;
+            this.listViewStartupPrograms.GridLines = true;
+            this.listViewStartupPrograms.HideSelection = false;
+            this.listViewStartupPrograms.Location = new System.Drawing.Point(8, 19);
+            this.listViewStartupPrograms.Name = "listViewStartupPrograms";
+            this.listViewStartupPrograms.Size = new System.Drawing.Size(602, 317);
+            this.listViewStartupPrograms.TabIndex = 4;
+            this.listViewStartupPrograms.UseCompatibleStateImageBehavior = false;
+            this.listViewStartupPrograms.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Programs";
+            this.columnHeader1.Width = 299;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "State";
+            this.columnHeader2.Width = 298;
+            // 
+            // refresh_btn
+            // 
+            this.refresh_btn.BackColor = System.Drawing.Color.Transparent;
+            this.refresh_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.refresh_btn.BorderRadius = 5;
+            this.refresh_btn.BorderThickness = 2;
+            this.refresh_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.refresh_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.refresh_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.refresh_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.refresh_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.refresh_btn.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.refresh_btn.ForeColor = System.Drawing.Color.White;
+            this.refresh_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.refresh_btn.Location = new System.Drawing.Point(312, 353);
+            this.refresh_btn.Name = "refresh_btn";
+            this.refresh_btn.Size = new System.Drawing.Size(146, 38);
+            this.refresh_btn.TabIndex = 3;
+            this.refresh_btn.Text = "Refresh";
+            this.refresh_btn.UseTransparentBackground = true;
+            this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
+            // 
+            // disable_btn
+            // 
+            this.disable_btn.BackColor = System.Drawing.Color.Transparent;
+            this.disable_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.disable_btn.BorderRadius = 5;
+            this.disable_btn.BorderThickness = 2;
+            this.disable_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.disable_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.disable_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.disable_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.disable_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.disable_btn.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.disable_btn.ForeColor = System.Drawing.Color.White;
+            this.disable_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.disable_btn.Location = new System.Drawing.Point(160, 353);
+            this.disable_btn.Name = "disable_btn";
+            this.disable_btn.Size = new System.Drawing.Size(146, 38);
+            this.disable_btn.TabIndex = 2;
+            this.disable_btn.Text = "Disable";
+            this.disable_btn.UseTransparentBackground = true;
+            this.disable_btn.Click += new System.EventHandler(this.disable_btn_Click);
+            // 
+            // enable_btn
+            // 
+            this.enable_btn.BackColor = System.Drawing.Color.Transparent;
+            this.enable_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.enable_btn.BorderRadius = 5;
+            this.enable_btn.BorderThickness = 2;
+            this.enable_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.enable_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.enable_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.enable_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.enable_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.enable_btn.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.enable_btn.ForeColor = System.Drawing.Color.White;
+            this.enable_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.enable_btn.Location = new System.Drawing.Point(8, 353);
+            this.enable_btn.Name = "enable_btn";
+            this.enable_btn.Size = new System.Drawing.Size(146, 38);
+            this.enable_btn.TabIndex = 1;
+            this.enable_btn.Text = "Enable";
+            this.enable_btn.UseTransparentBackground = true;
+            this.enable_btn.Click += new System.EventHandler(this.enable_btn_Click);
+            // 
+            // addtostartup_btn
+            // 
+            this.addtostartup_btn.BackColor = System.Drawing.Color.Transparent;
+            this.addtostartup_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.addtostartup_btn.BorderRadius = 5;
+            this.addtostartup_btn.BorderThickness = 2;
+            this.addtostartup_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addtostartup_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addtostartup_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addtostartup_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addtostartup_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.addtostartup_btn.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.addtostartup_btn.ForeColor = System.Drawing.Color.White;
+            this.addtostartup_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.addtostartup_btn.Location = new System.Drawing.Point(464, 353);
+            this.addtostartup_btn.Name = "addtostartup_btn";
+            this.addtostartup_btn.Size = new System.Drawing.Size(146, 38);
+            this.addtostartup_btn.TabIndex = 5;
+            this.addtostartup_btn.Text = "Add Program";
+            this.addtostartup_btn.UseTransparentBackground = true;
+            this.addtostartup_btn.Click += new System.EventHandler(this.addtostartup_btn_Click);
             // 
             // Giftig
             // 
@@ -1177,6 +1324,7 @@
             this.tabPage3.PerformLayout();
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1253,6 +1401,17 @@
         private Guna.UI2.WinForms.Guna2CustomCheckBox keepassxc_check;
         private System.Windows.Forms.Label label24;
         private Guna.UI2.WinForms.Guna2CustomCheckBox betterchatgpt_check;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.TabPage tabPage5;
+        private Guna.UI2.WinForms.Guna2Button refresh_btn;
+        private Guna.UI2.WinForms.Guna2Button disable_btn;
+        private Guna.UI2.WinForms.Guna2Button enable_btn;
+        private System.Windows.Forms.ListView listViewStartupPrograms;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private Guna.UI2.WinForms.Guna2Button addtostartup_btn;
     }
 }
 
